@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">E-commerce</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link"
+          routerLinkActive="active-link"
+          aria-current="page"
+          routerLink="/"
+          >ProductList</a
+        >
+        <a
+          class="nav-link"
+          routerLinkActive="active-link"
+          routerLink="ProductDetails/"
+          >ProductDetails</a
+        >
+        <a class="nav-link" routerLinkActive="active-link" routerLink="Register"
+          >Register</a
+        >
+        <a class="nav-link" routerLinkActive="active-link" routerLink="Login"
+          >Login</a
+        >
+        <a class="nav-link" routerLinkActive="active-link" routerLink="Cart"
+          >Cart</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>
