@@ -47,7 +47,7 @@
       <span *ngIf="Password.errors?.['required']">This field is required</span>
       <span *ngIf="Password.errors?.['minlength']">min length is 10</span>
     </div>
-    <p>Don’t have account ? <a routerLink="Register">Register</a></p>
+    <p>Don’t have account ? <a routerLink="/Register">Register</a></p>
   </div>
   <button type="submit" class="" [disabled]="loginForm.invalid">log in</button>
 </form>
