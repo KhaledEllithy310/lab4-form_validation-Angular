@@ -1,21 +1,25 @@
 <div class="row">
   <div class="col-lg-4">
     <div class="card card_product">
-      <img [src]="targetProduct.thumbnail" class="card-img-top" alt="..." />
+      <img
+        [src]="targetProduct?.thumbnail"
+        class="card-img-top"
+        alt="..."
+      />
       <div class="card-body">
-        <h5 class="card-title">{{ targetProduct.title }}</h5>
-        <p class="card-text">{{ targetProduct.description }}</p>
+        <h5 class="card-title">{{ targetProduct?.title }}</h5>
+        <p class="card-text">{{ targetProduct?.description }}</p>
         <p class="card-text productPrice">
-          price : {{ targetProduct.price | price }}
+          price : {{ targetProduct?.price | price }}
         </p>
         <p
           class="card-text product_stock"
-          [ngStyle]="{ color: targetProduct.stock <= 0 ? 'red' : 'green' }"
+          [ngStyle]="{ color: targetProduct?.stock <= 0 ? 'red' : 'green' }"
         >
-          {{ targetProduct.stock | stock }}
+          {{ targetProduct?.stock | stock }}
         </p>
         <p class="card-text productDate">
-          {{ targetProduct.createdAt | date : "MMMM YYYY" }}
+          {{ targetProduct?.createdAt | date : "MMMM YYYY" }}
         </p>
       </div>
     </div>

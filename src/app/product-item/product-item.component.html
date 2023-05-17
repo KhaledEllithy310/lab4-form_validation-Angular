@@ -3,14 +3,18 @@
   <div class="card-body">
     <h5 class="card-title">Name : {{ productItem.title }}</h5>
     <p class="card-text">{{ productItem.description }}</p>
-    <p class="card-text productPrice">price : {{ productItem.price | price }}</p>
+    <p class="card-text productPrice">
+      price : {{ productItem.price | price }}
+    </p>
     <p
       class="card-text product_stock"
       [ngStyle]="{ color: productItem.stock <= 0 ? 'red' : 'green' }"
     >
       {{ productItem.stock | stock }}
     </p>
-    <p class="card-text productDate" >{{ productItem.createdAt | date : "MMMM YYYY" }}</p>
+    <p class="card-text productDate">
+      {{ productItem.createdAt | date : "MMMM YYYY" }}
+    </p>
 
     <div class="btn_group">
       <button
@@ -19,7 +23,7 @@
       >
         Show Details
       </button>
-      <button class="btn btn-primary btnCart" (click)="redirectCart()">
+      <button class="btn btn-primary btnCart" (click)="addToCart()">
         Add To Cart
       </button>
     </div>
